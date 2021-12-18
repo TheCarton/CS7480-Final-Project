@@ -1,0 +1,27 @@
+courtOrder ~ flip 0.9;
+if courtOrder {
+    captain ~ flip 0.1
+    }
+    else {
+    captain = false
+         };
+
+if captain {
+    rifle1 ~ flip 0.9;
+    rifle2 ~ flip 0.9
+    }
+    else {
+    rifle1 = false;
+    rifle2 = false
+         };
+
+if (|| rifle1 rifle2) {
+    death = true
+    }
+    else {
+    death = false
+         };
+
+observe do ( captain = true );
+
+return death
